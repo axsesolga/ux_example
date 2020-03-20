@@ -1,13 +1,17 @@
 package com.example.uxexample;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+//import
 
 import org.w3c.dom.Text;
 
@@ -52,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
     public String get_random_word(String word)
     {
+
         Random rd = new Random();
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < word.length(); i++)
@@ -62,17 +67,48 @@ public class MainActivity extends AppCompatActivity {
         return sb.toString();
     }
     int cur_index = 0;
+
+
+
+
     public void update_list()
     {
+        String text = textView.getText().toString();
+        if (text.charAt(text.length() - 1) ==  ' ') {
+            return;
+        }
         String[] words = (textView.getText()).toString().split(" ");
         String last_word = words[words.length - 1];
 
         words_3 = Arrays.asList(get_random_word(last_word), get_random_word(last_word), get_random_word(last_word));
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
-                (this, android.R.layout.simple_list_item_1, words_3);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String> (this, android.R.layout.simple_list_item_1, words_3);
+
+        //higlited adapter
+        //ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>( )
+        //{
+        //    @Override
+        //    public View getView(int position, View convertView, ViewGroup parent){
+        //        View row = super.getView(position, convertView, parent);
+        //        if (row == null) {
+        //            LayoutInflater mInflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        //            //row = mInflater.inflate(R.layout.list_kat, parent, false);
+        //        }
+        //        final ListView lv = (ListView) parent;
+        //        if(position == lv.getCheckedItemPosition()){
+        //            // цвет выбранного элемента
+        //            row.setBackgroundColor(0xFF0000FF);
+        //        } else {
+        //            // старая разметка, где работает только state_pressed
+        //            //row.setBackgroundResource(R.drawable.list_kat_background);
+        //        }
+        //        return row;
+        //    }
+        //};
+
         listView.setAdapter(arrayAdapter);
-        cur_elem.setText(words_3.get(cur_index));
+
+        cur_elem.setText(words_3.get(cur_index % 3));
     }
     public void set_listeners()
     {
@@ -176,11 +212,23 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener SPACE_listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                swap_last_word();
                 textView.append(" ");
-
             }
         };
         Space_button.setOnClickListener(SPACE_listener);
+    }
+
+    public void swap_last_word()
+    {
+        if (textView.getText().toString().charAt(textView.getText().toString().length() - 1) == ' ')
+            return;
+        String[] text = textView.getText().toString().split(" ");
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            String new_text = (String.join(" ", text)).replace(text[text.length-1], words_3.get(cur_index % 3));
+            textView.setText(new_text);
+        }
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
