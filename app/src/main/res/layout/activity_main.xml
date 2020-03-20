@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/d_button"
+        android:layout_width="67dp"
+        android:layout_height="67dp"
+        android:layout_x="138dp"
+        android:layout_y="446dp"
+        android:text="D" />
+
+    <Button
+        android:id="@+id/s_button"
+        android:layout_width="67dp"
+        android:layout_height="67dp"
+        android:layout_x="45dp"
+        android:layout_y="445dp"
+        android:text="S" />
+
+    <Button
+        android:id="@+id/f_button"
+        android:layout_width="67dp"
+        android:layout_height="67dp"
+        android:layout_x="219dp"
+        android:layout_y="449dp"
+        android:text="F" />
+
+    <Button
+        android:id="@+id/g_button"
+        android:layout_width="67dp"
+        android:layout_height="67dp"
+        android:layout_x="312dp"
+        android:layout_y="443dp"
+        android:text="G" />
+
+    <Button
+        android:id="@+id/k_button"
+        android:layout_width="67dp"
+        android:layout_height="67dp"
+        android:layout_x="19dp"
+        android:layout_y="530dp"
+        android:text="K" />
+
+    <Button
+        android:id="@+id/h_button"
+        android:layout_width="67dp"
+        android:layout_height="67dp"
+        android:layout_x="124dp"
+        android:layout_y="533dp"
+        android:text="H" />
+
+    <Button
+        android:id="@+id/space_button"
+        android:layout_width="203dp"
+        android:layout_height="66dp"
+        android:layout_x="151dp"
+        android:layout_y="620dp"
+        android:text="_" />
+
+    <Button
+        android:id="@+id/l_button"
+        android:layout_width="67dp"
+        android:layout_height="67dp"
+        android:layout_x="216dp"
+        android:layout_y="522dp"
+        android:text="L" />
+
+    <Button
+        android:id="@+id/j_button"
+        android:layout_width="67dp"
+        android:layout_height="67dp"
+        android:layout_x="306dp"
+        android:layout_y="537dp"
+        android:text="J" />
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="67dp"
+        android:layout_height="67dp"
+        android:layout_x="49dp"
+        android:layout_y="626dp"
+        android:text="↓" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="314dp"
+        android:layout_height="83dp"
+        android:layout_x="46dp"
+        android:layout_y="47dp" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="323dp"
+        android:layout_height="199dp"
+        android:layout_x="42dp"
+        android:layout_y="187dp" />
+
+</AbsoluteLayout>
