@@ -96,8 +96,15 @@
     <ListView
         android:id="@+id/listView"
         android:layout_width="323dp"
-        android:layout_height="199dp"
+        android:layout_height="192dp"
         android:layout_x="42dp"
-        android:layout_y="187dp" />
+        android:layout_y="139dp" />
+
+    <TextView
+        android:id="@+id/cur_elem"
+        android:layout_width="115dp"
+        android:layout_height="35dp"
+        android:layout_x="42dp"
+        android:layout_y="360dp" />
 
 </AbsoluteLayout>

@@ -9,6 +9,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Dictionary;
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     Button Space_button;
     TextView textView;
     ListView listView;
+    TextView cur_elem;
 
     List<String> words_3 = new ArrayList<>();
 
@@ -58,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         }
         return sb.toString();
     }
-
+    int cur_index = 0;
     public void update_list()
     {
         String[] words = (textView.getText()).toString().split(" ");
@@ -69,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
                 (this, android.R.layout.simple_list_item_1, words_3);
         listView.setAdapter(arrayAdapter);
+        cur_elem.setText(words_3.get(cur_index));
     }
     public void set_listeners()
     {
@@ -84,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
         Space_button = (Button)findViewById(R.id.space_button);
         textView = (TextView)findViewById(R.id.textView2);
         listView = (ListView)findViewById(R.id.listView);
+        cur_elem = (TextView)findViewById(R.id.cur_elem);
 
 
 
@@ -163,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener NEXT_listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO
+                cur_elem.setText(words_3.get(++cur_index % 3));
             }
         };
         Next_button.setOnClickListener(NEXT_listener);
@@ -182,6 +187,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        words_3.add(" ");
+        words_3.add(" ");
+        words_3.add(" ");
         set_listeners();
     }
 
