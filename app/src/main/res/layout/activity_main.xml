@@ -18,11 +18,12 @@
             android:layout_height="67dp"
             android:layout_above="@+id/k_button"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="28dp"
-            android:layout_marginEnd="30.6dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="16dp"
             android:layout_toStartOf="@+id/s_button"
-            android:text="D" />
+            android:text="D        ь я л ц е"
+            android:textSize="12sp" />
 
         <Button
             android:id="@+id/s_button"
@@ -32,7 +33,7 @@
             android:layout_marginEnd="30.6dp"
             android:layout_marginBottom="15dp"
             android:layout_toStartOf="@+id/f_button"
-            android:text="S" />
+            android:text="S        ы х в н г" />
 
         <Button
             android:id="@+id/f_button"
@@ -42,7 +43,7 @@
             android:layout_marginEnd="30.6dp"
             android:layout_marginBottom="15dp"
             android:layout_toStartOf="@+id/g_button"
-            android:text="F" />
+            android:text="F        к с з" />
 
         <Button
             android:id="@+id/g_button"
@@ -52,7 +53,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="28dp"
             android:layout_marginBottom="15dp"
-            android:text="G" />
+            android:text="G         ё э р ж п" />
 
         <Button
             android:id="@+id/k_button"
@@ -64,7 +65,7 @@
             android:layout_marginEnd="30.6dp"
             android:layout_marginBottom="15dp"
             android:layout_toStartOf="@+id/h_button"
-            android:text="K" />
+            android:text="K        и ш д ъ" />
 
         <Button
             android:id="@+id/h_button"
@@ -74,7 +75,7 @@
             android:layout_marginEnd="30.6dp"
             android:layout_marginBottom="15dp"
             android:layout_toStartOf="@+id/l_button"
-            android:text="H" />
+            android:text="H        а й м" />
 
         <Button
             android:id="@+id/l_button"
@@ -84,7 +85,7 @@
             android:layout_marginEnd="30.6dp"
             android:layout_marginBottom="15dp"
             android:layout_toStartOf="@+id/j_button"
-            android:text="L" />
+            android:text="L        у ф т ч" />
 
         <Button
             android:id="@+id/j_button"
@@ -94,7 +95,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="28dp"
             android:layout_marginBottom="15dp"
-            android:text="J" />
+            android:text="J        ю щ о б" />
 
         <Button
             android:id="@+id/space_button"
